@@ -4,8 +4,7 @@ import { Observable } from "rxjs";
 
 let numbers=[1,2,3,4,4,5];
 // let source = Observable.from(numbers);
-let source = Observable.fromEvent(document, 'mousemove')
-.map(x => ;
+let source = Observable.fromEvent(document, 'mousemove');
 //
 
 @Component({

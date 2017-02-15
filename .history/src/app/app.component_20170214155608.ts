@@ -3,10 +3,7 @@ import { Observable } from "rxjs";
 
 
 let numbers=[1,2,3,4,4,5];
-// let source = Observable.from(numbers);
-let source = Observable.fromEvent(document, 'mousemove')
-.map(x => ;
-//
+let source = Observable.from(numbers);
 
 @Component({
   selector: 'app-root',
@@ -33,13 +30,13 @@ export class AppComponent {
   // }
 }
 
-// let source2 = Observable.create(function(subscriber){
-//
-  // subscriber.next(Math.random());
-  // subscriber.next(Math.random());
-  // subscriber.next(Math.random());
-  // subscriber.complete();
-// })
-source.subscribe(value => console.log(value));
+let source2 = Observable.create(function(subscriber){
 
-// source2.subscribe(value => console.log(`value:  ${value}`))
+  subscriber.next(Math.random());
+  subscriber.next(Math.random());
+  subscriber.next(Math.random());
+  subscriber.complete();
+})
+source.subscribe(value => console.log(`value:  ${value}`));
+
+source2.subscribe(value => console.log(`value:  ${value}`))
